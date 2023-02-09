@@ -1,10 +1,9 @@
 const express = require('express');
-const controlles = require('../controllers/index.controller');
-
+const folderStructurecontroller = require('../controllers/folderStructure.controller');
 const folderStructureRoutes = express.Router();
 
 
 folderStructureRoutes.route('/makefile/:name')
-.post(controlles.makeFolder)
+    .post(folderStructurecontroller.makeFolder)
 
 module.exports = folderStructureRoutes
