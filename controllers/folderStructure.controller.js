@@ -21,6 +21,19 @@ const folderStructurecontroller = {
       return response.errorResponse(501, "directory created err", res);
     }
   },
+  // This is use for send the html file to the client //
+  sendHtmlFile: (req, res) => {
+    try {
+      console.log("file sended");
+      // sendFile is use for the send file to the client
+      //   {root: path.join(__dirname, "../assets/html"),} this is use for file path
+      return res.sendFile("index.html", {
+        root: path.join(__dirname, "../assets/html"),
+      });
+    } catch (err) {
+      console.log("file sendind error");
+    }
+  },
 };
 
 module.exports = folderStructurecontroller;
