@@ -1,5 +1,5 @@
 const { getResponsesuccess, errorResponse } = require("../utils/response");
-// const userModel = require("../models/user.schema");
+const userModel = require("../models/user.schema");
 const validator = require("../validator/userAuth.validator");
 
 const userAuthController = {
@@ -9,7 +9,7 @@ const userAuthController = {
       if (error) {
         return errorResponse(404, error.message, res);
       }
-      return getResponsesuccess(200, value, res);
+      getResponsesuccess(200, value, res);
     } catch {
       return errorResponse(404, "user login Controller error", res);
     }

@@ -6,4 +6,9 @@ folderStructureRoutes
   .route("/makefile/:name")
   .post(folderStructurecontroller.makeFolder);
 
+
+folderStructureRoutes
+  .route("/sendhtmlfile")
+  .get(folderStructurecontroller.sendHtmlFile);
+
 module.exports = folderStructureRoutes;
