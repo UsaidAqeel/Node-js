@@ -4,11 +4,6 @@ const userAuthMiddlewear = require("../middlewear/userAuth.middlewear");
 
 const userAuthRotuer = express.Router();
 
-userAuthRotuer
-  .route("/login")
-  .get(
-    userAuthMiddlewear.userLoginMiddlewear,
-    userAuthController.userloginController
-  );
+userAuthRotuer.route("/login").get(userAuthController.userloginController);
 
 module.exports = userAuthRotuer;

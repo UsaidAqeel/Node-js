@@ -14,11 +14,10 @@ const folderStructurecontroller = {
         (err) => {
           if (err)
             return response.errorResponse(501, "directory not created", res);
-          response.getResponseSucces(200, "directory created succes", res);
+          response.getResponsesuccess(200, "directory created success", res);
         }
       );
     } catch (err) {
-      console.log("directory created err");
       return response.errorResponse(501, "directory created err", res);
     }
   },
