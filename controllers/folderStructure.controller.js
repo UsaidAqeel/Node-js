@@ -8,6 +8,7 @@ const folderStructurecontroller = {
     try {
       let folderName = req.params.name;
       // over all folder is created in this directory. /folders
+      // path.join() is use for join the path
       fs.mkdir(
         path.join("./folders", folderName),
         { recursive: true },
